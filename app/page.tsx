@@ -3,6 +3,7 @@
 import { Header } from "@/components/shared/Header";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { WhyRoofers } from "@/components/sections/WhyRoofers";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Hero />
       <HowItWorks />
+      <WhyRoofers />
     </>
   );
 }
