@@ -9,7 +9,6 @@ type EnvKey =
   | "GOOGLE_SERVICE_ACCOUNT_EMAIL"
   | "GOOGLE_SERVICE_ACCOUNT_KEY"
   | "GOOGLE_CALENDAR_ID"
-  | "PHOTO_SMS_NUMBER"
   | "SITE_URL";
 
 function read(key: EnvKey, fallback?: string): string {
@@ -40,9 +39,6 @@ export const env = {
   },
   get GOOGLE_CALENDAR_ID() {
     return read("GOOGLE_CALENDAR_ID");
-  },
-  get PHOTO_SMS_NUMBER() {
-    return read("PHOTO_SMS_NUMBER");
   },
   get SITE_URL() {
     return read("SITE_URL", "https://detachandreset.com");

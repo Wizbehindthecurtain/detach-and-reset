@@ -57,10 +57,10 @@ export function Hero() {
 
             <div className="reveal reveal-5 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-stretch pt-1">
               <a
-                href="#quote"
+                href="#book"
                 className="group inline-flex items-center justify-between gap-4 h-14 pl-7 pr-5 rounded-none bg-safety hover:bg-safety-hot text-navy-deep font-display font-bold tracking-[0.18em] uppercase text-base transition-colors w-full sm:w-auto"
               >
-                <span>Get a Quote</span>
+                <span>Book a call</span>
                 <ArrowUpRight
                   className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   strokeWidth={2.25}
