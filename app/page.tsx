@@ -4,6 +4,7 @@ import { Header } from "@/components/shared/Header";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyRoofers } from "@/components/sections/WhyRoofers";
+import { BrandsServiced } from "@/components/sections/BrandsServiced";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <WhyRoofers />
+      <BrandsServiced />
     </>
   );
 }
