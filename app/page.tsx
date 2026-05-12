@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyRoofers } from "@/components/sections/WhyRoofers";
 import { BrandsServiced } from "@/components/sections/BrandsServiced";
+import { RecentJobs } from "@/components/sections/RecentJobs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HowItWorks />
       <WhyRoofers />
       <BrandsServiced />
+      <RecentJobs />
     </>
   );
 }
