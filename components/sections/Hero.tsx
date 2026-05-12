@@ -90,8 +90,8 @@ export function Hero() {
             <CornerBrackets size={5} />
             <div className="absolute inset-3 sm:inset-4 bg-navy-soft/40 overflow-hidden">
               <Image
-                src="/jobs/raymond-during.jpg"
-                alt="Raymond, FL — panels detached, roof clear for reroof."
+                src="/jobs/hero-solar-aerial.jpg"
+                alt="Aerial view of a Florida residential solar array — black panels on a tile roof, pool and lakefront alongside."
                 fill
                 priority
                 sizes="(min-width: 1024px) 42vw, (min-width: 640px) 92vw, 100vw"
@@ -114,7 +114,7 @@ export function Hero() {
               aria-hidden
               className="absolute -bottom-2 right-3 sm:right-4 px-2 py-0.5 bg-navy text-bone/70 font-mono text-[10px] uppercase tracking-[0.3em] z-10"
             >
-              Raymond, FL · During
+              Aerial · FL
             </span>
           </div>
         </div>

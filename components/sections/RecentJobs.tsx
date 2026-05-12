@@ -17,49 +17,49 @@ type Job = {
   pending: boolean;
 };
 
-const JOB_LOCATION = "Raymond, FL";
+const JOB_LOCATION = "Raymond, VA";
 
 const JOBS: ReadonlyArray<Job> = [
   {
     slot: "R-01",
     stage: "Before",
     filename: "raymond-before.jpg",
-    alt: "Raymond, FL — solar array on roof before detach.",
+    alt: "Raymond, VA — solar array on roof before detach.",
     pending: false,
   },
   {
     slot: "R-02",
     stage: "During",
     filename: "raymond-during.jpg",
-    alt: "Raymond, FL — panels detached, roof clear for reroof.",
+    alt: "Raymond, VA — panels detached, roof clear for reroof.",
     pending: false,
   },
   {
     slot: "R-03",
     stage: "After",
     filename: "raymond-after.jpg",
-    alt: "Raymond, FL — solar reset on the new roof.",
+    alt: "Raymond, VA — solar reset on the new roof.",
     pending: false,
   },
   {
     slot: "R-04",
     stage: "Before",
     filename: "raymond-before-2.jpg",
-    alt: "Raymond, FL — second job, solar array on roof before detach.",
+    alt: "Raymond, VA — second job, solar array on roof before detach.",
     pending: false,
   },
   {
     slot: "R-05",
     stage: "During",
     filename: "raymond-during-2.jpg",
-    alt: "Raymond, FL — second job, panels detached, roof clear for reroof.",
+    alt: "Raymond, VA — second job, panels detached, roof clear for reroof.",
     pending: false,
   },
   {
     slot: "R-06",
     stage: "After",
     filename: "raymond-after-2.jpg",
-    alt: "Raymond, FL — second job, solar reset on the new roof.",
+    alt: "Raymond, VA — second job, solar reset on the new roof.",
     pending: false,
   },
 ];
