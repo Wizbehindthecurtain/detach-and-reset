@@ -41,6 +41,27 @@ const JOBS: ReadonlyArray<Job> = [
     alt: "Raymond, FL — solar reset on the new roof.",
     pending: false,
   },
+  {
+    slot: "R-04",
+    stage: "Before",
+    filename: "raymond-before-2.jpg",
+    alt: "Raymond, FL — second job, solar array on roof before detach.",
+    pending: false,
+  },
+  {
+    slot: "R-05",
+    stage: "During",
+    filename: "raymond-during-2.jpg",
+    alt: "Raymond, FL — second job, panels detached, roof clear for reroof.",
+    pending: false,
+  },
+  {
+    slot: "R-06",
+    stage: "After",
+    filename: "raymond-after-2.jpg",
+    alt: "Raymond, FL — second job, solar reset on the new roof.",
+    pending: false,
+  },
 ];
 
 export function RecentJobs() {
@@ -66,11 +87,11 @@ export function RecentJobs() {
             Recent jobs.
           </h2>
           <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/45 mt-1">
-            One job, three frames — {JOB_LOCATION}.
+            Field log — {JOB_LOCATION}.
           </p>
         </div>
 
-        <ul className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+        <ul className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-y-14">
           {JOBS.map(({ slot, stage, filename, alt, pending }) => (
             <li key={slot} className="group">
               <figure className="flex flex-col gap-4">
