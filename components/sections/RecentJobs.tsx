@@ -25,21 +25,21 @@ const JOBS: ReadonlyArray<Job> = [
     stage: "Before",
     filename: "raymond-before.jpg",
     alt: "Raymond, FL — solar array on roof before detach.",
-    pending: true,
+    pending: false,
   },
   {
     slot: "R-02",
     stage: "During",
     filename: "raymond-during.jpg",
     alt: "Raymond, FL — panels detached, roof clear for reroof.",
-    pending: true,
+    pending: false,
   },
   {
     slot: "R-03",
     stage: "After",
     filename: "raymond-after.jpg",
     alt: "Raymond, FL — solar reset on the new roof.",
-    pending: true,
+    pending: false,
   },
 ];
 

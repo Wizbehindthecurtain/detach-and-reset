@@ -6,6 +6,7 @@
 // gap reads as intentionally reserved, not forgotten. Below the fold of the hero:
 // a slow marquee of credentials. Page load fires a staggered CSS reveal.
 
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { CornerBrackets } from "@/components/shared/CornerBrackets";
 import { PhoneLink } from "@/components/shared/PhoneLink";
@@ -88,29 +89,32 @@ export function Hero() {
           <div className="reveal reveal-4 lg:col-span-5 relative w-full aspect-[4/5] sm:aspect-[5/4] lg:aspect-auto lg:min-h-[560px] lg:mt-2">
             <CornerBrackets size={5} />
             <div className="absolute inset-3 sm:inset-4 bg-navy-soft/40 overflow-hidden">
-              <div aria-hidden className="absolute inset-0 hatched-light" />
-              <span aria-hidden className="grain" />
-
-              <div className="relative h-full flex flex-col items-center justify-center text-center gap-3 px-6">
-                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/35">
-                  {"// ASSET BAY"}
-                </span>
-                <span className="font-display font-black text-7xl sm:text-8xl text-bone/30 leading-none">
-                  J-01
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/35 max-w-[14rem]">
-                  Raymond_DNR
-                  <br />
-                  jobsite photo pending
-                </span>
-              </div>
+              <Image
+                src="/jobs/raymond-during.jpg"
+                alt="Raymond, FL — panels detached, roof clear for reroof."
+                fill
+                priority
+                sizes="(min-width: 1024px) 42vw, (min-width: 640px) 92vw, 100vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-tr from-navy-deep/40 via-transparent to-transparent"
+              />
             </div>
 
             <span
               aria-hidden
-              className="absolute -top-2 left-3 sm:left-4 px-2 py-0.5 bg-navy text-safety font-mono text-[10px] uppercase tracking-[0.3em]"
+              className="absolute -top-2 left-3 sm:left-4 px-2 py-0.5 bg-navy text-safety font-mono text-[10px] uppercase tracking-[0.3em] z-10"
             >
               Slot · Hero
+            </span>
+
+            <span
+              aria-hidden
+              className="absolute -bottom-2 right-3 sm:right-4 px-2 py-0.5 bg-navy text-bone/70 font-mono text-[10px] uppercase tracking-[0.3em] z-10"
+            >
+              Raymond, FL · During
             </span>
           </div>
         </div>
@@ -147,8 +151,6 @@ function TickerRow({ "aria-hidden": ariaHidden }: { "aria-hidden"?: boolean }) {
 }
 
 // ─── TODO list (Slice 1) ─────────────────────────────────────────────────
-//  - Drop the real Raymond_DNR photo into /public/jobs/raymond-during.jpg
-//    and swap the J-01 asset-bay placeholder block for a <Image>.
 //  - Set NEXT_PUBLIC_BUSINESS_PHONE in .env.local; PhoneLink auto-activates.
 //  - The H1 keeps the ampersand "&" per scaffolding spec; if you'd rather it
 //    spell "and" to match the wordmark, swap one block — flagged for review.
