@@ -1,47 +1,126 @@
-// Hero section — first thing a roofer sees. Mobile-first: stacked H1 / sub / CTAs / image.
-// On md+: two-column grid with the photo placeholder on the right.
+// Hero — industrial-editorial. Asymmetric 12-col grid on lg+, single-column on mobile.
+// Drafting-table grain + faint blueprint grid in the background, mono spec eyebrow,
+// massive Big Shoulders display H1 with the brand verb ("DETACH & RESET") punched
+// in safety-orange. Right side is an "asset bay" placeholder for the Raymond_DNR
+// jobsite photo — bracketed corners, hatched fill, alphanumeric slot code — so the
+// gap reads as intentionally reserved, not forgotten. Below the fold of the hero:
+// a slow marquee of credentials. Page load fires a staggered CSS reveal.
 
+import { ArrowUpRight } from "lucide-react";
+import { CornerBrackets } from "@/components/shared/CornerBrackets";
 import { PhoneLink } from "@/components/shared/PhoneLink";
+
+const TICKER_FACTS = [
+  "LICENSED",
+  "INSURED",
+  "STATEWIDE FLORIDA",
+  "NO MIDDLEMAN",
+  "WARRANTY PRESERVED",
+  "FAST TURNAROUND",
+  "PERMITS PULLED",
+  "ENPHASE · TESLA · SOLAREDGE",
+];
 
 export function Hero() {
   return (
-    <section className="bg-navy text-bone">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 lg:pt-24 pb-12 sm:pb-20 lg:pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
-          <div className="flex flex-col gap-6 sm:gap-8">
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
-              Florida&apos;s solar detach &amp; reset crew for roofers.
+    <section className="relative bg-navy text-bone overflow-hidden">
+      <div aria-hidden className="absolute inset-0 grid-bg opacity-50" />
+      <span aria-hidden className="grain" />
+
+      <div aria-hidden className="absolute top-0 right-0 h-px w-2/3 bg-gradient-to-l from-safety/60 via-safety/20 to-transparent" />
+      <div aria-hidden className="absolute bottom-0 left-0 h-px w-1/2 bg-gradient-to-r from-safety/40 via-safety/10 to-transparent" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="reveal reveal-1 pt-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-bone/40">
+          <span>{"// solar R&R · roofer-only"}</span>
+          <span className="hidden md:inline">Bay J-01 · 2026</span>
+        </div>
+
+        <div className="pt-10 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="lg:col-span-7 flex flex-col gap-7 sm:gap-9">
+            <span className="reveal reveal-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.3em] text-safety">
+              ▌ Florida solar R&amp;R · for roofers
+            </span>
+
+            <h1 className="reveal reveal-3 font-display font-black uppercase text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-[9rem] leading-[0.82] tracking-tight">
+              <span className="block">Florida&apos;s solar</span>
+              <span className="block text-safety">detach &amp; reset</span>
+              <span className="block">crew for roofers.</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-bone/80 max-w-xl leading-relaxed">
+            <p className="reveal reveal-4 text-base sm:text-lg lg:text-xl text-bone/75 max-w-xl leading-relaxed">
               Licensed, insured, fast. We pull the panels before your reroof
               and reset them after — without touching your customer
               relationship.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center pt-2">
+            <div className="reveal reveal-5 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-stretch pt-1">
               <a
                 href="#quote"
-                className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-safety hover:bg-safety-hot text-navy-deep font-bold tracking-wide transition-colors w-full sm:w-auto"
+                className="group inline-flex items-center justify-between gap-4 h-14 pl-7 pr-5 rounded-none bg-safety hover:bg-safety-hot text-navy-deep font-display font-bold tracking-[0.18em] uppercase text-base transition-colors w-full sm:w-auto"
               >
-                Get a Quote
+                <span>Get a Quote</span>
+                <ArrowUpRight
+                  className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  strokeWidth={2.25}
+                  aria-hidden
+                />
               </a>
-              <PhoneLink variant="cta" />
+              <PhoneLink variant="cta" className="h-14" />
             </div>
+
+            <dl className="reveal reveal-6 mt-2 grid grid-cols-3 gap-x-6 max-w-md border-t border-bone/10 pt-5 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-bone/55">
+              <div className="flex flex-col gap-1">
+                <dt className="text-bone/35">License</dt>
+                <dd className="text-bone/80">EC13013240</dd>
+              </div>
+              <div className="flex flex-col gap-1">
+                <dt className="text-bone/35">Coverage</dt>
+                <dd className="text-bone/80">Statewide FL</dd>
+              </div>
+              <div className="flex flex-col gap-1">
+                <dt className="text-bone/35">Insured</dt>
+                <dd className="text-bone/80">Fully</dd>
+              </div>
+            </dl>
           </div>
 
-          {/* TODO(slice-1): replace this placeholder with a real Raymond_DNR photo
-              once named — e.g. /public/jobs/raymond-during.jpg. Per project rules:
-              no stock photos, no fillers. */}
-          <div className="relative aspect-[4/3] sm:aspect-[5/4] md:aspect-[4/5] lg:aspect-[5/6] w-full bg-navy-soft rounded-lg ring-1 ring-bone/10 overflow-hidden flex items-center justify-center">
-            <div className="text-center px-6 text-steel">
-              <p className="font-display text-3xl text-bone/40 tracking-wide">
-                JOBSITE PHOTO
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-widest text-bone/30">
-                Raymond_DNR — pending /public/jobs/
-              </p>
+          <div className="reveal reveal-4 lg:col-span-5 relative w-full aspect-[4/5] sm:aspect-[5/4] lg:aspect-auto lg:min-h-[560px] lg:mt-2">
+            <CornerBrackets size={5} />
+            <div className="absolute inset-3 sm:inset-4 bg-navy-soft/40 overflow-hidden">
+              <div aria-hidden className="absolute inset-0 hatched-light" />
+              <span aria-hidden className="grain" />
+
+              <div className="relative h-full flex flex-col items-center justify-center text-center gap-3 px-6">
+                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/35">
+                  {"// ASSET BAY"}
+                </span>
+                <span className="font-display font-black text-7xl sm:text-8xl text-bone/30 leading-none">
+                  J-01
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/35 max-w-[14rem]">
+                  Raymond_DNR
+                  <br />
+                  jobsite photo pending
+                </span>
+              </div>
             </div>
+
+            <span
+              aria-hidden
+              className="absolute -top-2 left-3 sm:left-4 px-2 py-0.5 bg-navy text-safety font-mono text-[10px] uppercase tracking-[0.3em]"
+            >
+              Slot · Hero
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative border-y border-bone/10 bg-navy-deep/60">
+        <div className="marquee py-3">
+          <div className="marquee__track">
+            <TickerRow />
+            <TickerRow aria-hidden />
           </div>
         </div>
       </div>
@@ -49,9 +128,27 @@ export function Hero() {
   );
 }
 
+function TickerRow({ "aria-hidden": ariaHidden }: { "aria-hidden"?: boolean }) {
+  return (
+    <ul
+      aria-hidden={ariaHidden}
+      className="flex shrink-0 items-center gap-10 pr-10 font-mono text-[11px] uppercase tracking-[0.3em] text-bone/45"
+    >
+      {TICKER_FACTS.map((fact, i) => (
+        <li key={`${fact}-${i}`} className="flex items-center gap-10 shrink-0">
+          <span>{fact}</span>
+          <span aria-hidden className="text-safety/60">
+            ◆
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 // ─── TODO list (Slice 1) ─────────────────────────────────────────────────
-//  - Add Raymond_DNR hero photo to /public/jobs/ and swap the placeholder div.
-//  - Set NEXT_PUBLIC_BUSINESS_PHONE in .env.local; PhoneLink will auto-activate.
-//  - Decide whether the H1 should keep the ampersand "&" (current per spec) or
-//    spell "and" to match the wordmark "DETACH AND RESET" — currently mismatched
-//    by design, defer to user review.
+//  - Drop the real Raymond_DNR photo into /public/jobs/raymond-during.jpg
+//    and swap the J-01 asset-bay placeholder block for a <Image>.
+//  - Set NEXT_PUBLIC_BUSINESS_PHONE in .env.local; PhoneLink auto-activates.
+//  - The H1 keeps the ampersand "&" per scaffolding spec; if you'd rather it
+//    spell "and" to match the wordmark, swap one block — flagged for review.

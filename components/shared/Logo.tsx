@@ -1,5 +1,6 @@
-// 4i Energy mark + "DETACH AND RESET" wordmark. Variant picks SVG and wordmark color
-// to suit the surface: `light` for navy backgrounds, `dark` for bone backgrounds.
+// 4i Energy mark + "DETACH AND RESET" wordmark. Wordmark uses the display
+// face (Big Shoulders) for an industrial-signage feel. Variant picks SVG +
+// wordmark color: `light` for navy bg, `dark` for bone bg.
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -22,11 +23,11 @@ export function Logo({ variant = "light", className }: LogoProps) {
         width={40}
         height={40}
         priority
-        className="h-10 w-auto"
+        className="h-9 w-auto sm:h-10"
       />
       <span
         className={cn(
-          "text-sm sm:text-base font-bold tracking-[0.18em]",
+          "font-display font-bold text-base sm:text-lg tracking-[0.18em] leading-none",
           wordmarkColor,
         )}
       >

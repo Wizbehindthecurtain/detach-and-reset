@@ -10,8 +10,9 @@
   --color-bone: #f5f2ec;
   --color-ink: #0f172a;
 
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-bebas);
+  --font-sans: var(--font-plex);
+  --font-mono: var(--font-plex-mono);
+  --font-display: var(--font-shoulders);
 }
 
 html {
@@ -22,4 +23,127 @@ body {
   background: var(--color-bone);
   color: var(--color-ink);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* ── Decorative utilities ─────────────────────────────────────────────── */
+
+/* Drafting-table grain — faint SVG noise overlay. Position the parent
+   relative, drop a <span aria-hidden className="grain"> as the last child. */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+}
+
+/* Blueprint grid for dark surfaces */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(245, 242, 236, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 242, 236, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+}
+
+/* Diagonal hatching (asset-bay fill) */
+.hatched-light {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(245, 242, 236, 0.06) 6px,
+    rgba(245, 242, 236, 0.06) 7px
+  );
+}
+
+.hatched-dark {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(15, 23, 42, 0.04) 8px,
+    rgba(15, 23, 42, 0.04) 9px
+  );
+}
+
+/* Marquee ticker — duplicate inner content twice; animation translates -50% */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Staggered reveal on page load. Add .reveal + .reveal-N (1..6). */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-1 {
+  animation-delay: 0ms;
+}
+.reveal-2 {
+  animation-delay: 80ms;
+}
+.reveal-3 {
+  animation-delay: 160ms;
+}
+.reveal-4 {
+  animation-delay: 240ms;
+}
+.reveal-5 {
+  animation-delay: 320ms;
+}
+.reveal-6 {
+  animation-delay: 420ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .marquee__track {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

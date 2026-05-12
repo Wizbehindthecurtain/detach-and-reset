@@ -1,6 +1,7 @@
-// Renders the business phone as a tel: link. Reads NEXT_PUBLIC_BUSINESS_PHONE
-// at build time. When unset, renders a disabled-styled element with a "(business
-// phone TBD)" label so the missing input is loud during review — not a fake number.
+// Renders the business phone as a tel: link with a work-order vibe — the
+// number itself sets in IBM Plex Mono. Reads NEXT_PUBLIC_BUSINESS_PHONE at
+// build time. When unset, renders a disabled, bracketed "[ TBD ]" pill so
+// the missing input shouts at review time rather than getting silently shipped.
 
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,10 +12,10 @@ type PhoneLinkProps = {
 };
 
 const headerBase =
-  "inline-flex items-center gap-2 text-bone text-sm sm:text-base font-medium hover:text-safety transition-colors";
+  "inline-flex items-center gap-2 text-bone text-sm font-mono tracking-wider hover:text-safety transition-colors";
 
 const ctaBase =
-  "inline-flex items-center justify-center gap-2 h-12 px-6 rounded-md border border-bone/30 text-bone font-semibold tracking-wide hover:border-bone hover:bg-bone/5 transition-colors w-full sm:w-auto";
+  "group inline-flex items-center justify-center gap-3 h-12 px-6 rounded-none border border-bone/40 text-bone font-display font-bold tracking-[0.2em] text-sm uppercase hover:border-safety hover:text-safety transition-colors w-full sm:w-auto";
 
 export function PhoneLink({ variant = "header", className }: PhoneLinkProps) {
   const phone = process.env.NEXT_PUBLIC_BUSINESS_PHONE;
@@ -27,8 +28,8 @@ export function PhoneLink({ variant = "header", className }: PhoneLinkProps) {
         className={cn(baseClasses, "opacity-60 cursor-not-allowed", className)}
         title="Set NEXT_PUBLIC_BUSINESS_PHONE in .env.local"
       >
-        <Phone className={variant === "header" ? "h-4 w-4" : "h-5 w-5"} />
-        {variant === "header" ? "(business phone TBD)" : "Call us — TBD"}
+        <Phone className={variant === "header" ? "h-4 w-4" : "h-4 w-4"} />
+        {variant === "header" ? "[ PHONE · TBD ]" : "Call us — TBD"}
       </span>
     );
   }
@@ -37,8 +38,17 @@ export function PhoneLink({ variant = "header", className }: PhoneLinkProps) {
 
   return (
     <a href={telHref} className={cn(baseClasses, className)}>
-      <Phone className={variant === "header" ? "h-4 w-4" : "h-5 w-5"} />
-      {variant === "header" ? phone : "Call us"}
+      <Phone className="h-4 w-4" />
+      {variant === "header" ? (
+        <span>{phone}</span>
+      ) : (
+        <span className="flex items-baseline gap-2">
+          <span>Call</span>
+          <span className="font-mono tracking-wider text-xs opacity-80 normal-case">
+            {phone}
+          </span>
+        </span>
+      )}
     </a>
   );
 }

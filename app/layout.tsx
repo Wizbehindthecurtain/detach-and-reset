@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import {
+  Big_Shoulders,
+  IBM_Plex_Mono,
+  IBM_Plex_Sans,
+} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plex = IBM_Plex_Sans({
+  variable: "--font-plex",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
-  weight: "400",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
+
+const shoulders = Big_Shoulders({
+  variable: "--font-shoulders",
+  weight: ["500", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -27,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${bebas.variable} h-full antialiased`}
+      className={`${plex.variable} ${plexMono.variable} ${shoulders.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
