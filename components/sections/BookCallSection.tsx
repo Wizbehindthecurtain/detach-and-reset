@@ -65,7 +65,7 @@ export function BookCallSection() {
         </div>
 
         <p className="mt-10 sm:mt-12 text-sm italic text-steel max-w-2xl leading-relaxed">
-          Already got photos? Text them to{" "}
+          Already got photos? Text Jackson at{" "}
           {photoSms ? (
             <a
               href={`sms:${photoSms.replace(/[^\d+]/g, "")}`}

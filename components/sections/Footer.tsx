@@ -8,7 +8,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
 
-const CONTACT_EMAIL = "quotes@detachandreset.com";
+const CONTACT_EMAIL = "Operations@4i.energy";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -78,7 +78,7 @@ export function Footer() {
                   className="inline-flex items-center gap-3 text-bone hover:text-safety transition-colors"
                 >
                   <Mail className="h-4 w-4 shrink-0" aria-hidden />
-                  <span className="font-mono text-sm tracking-wider lowercase">
+                  <span className="font-mono text-sm tracking-wider">
                     {CONTACT_EMAIL}
                   </span>
                 </a>
@@ -87,7 +87,7 @@ export function Footer() {
               <li>
                 <div className="flex flex-col gap-1 pt-1">
                   <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/40">
-                    Photos by SMS
+                    Photos by SMS · Jackson
                   </span>
                   {photoSmsSet ? (
                     <a
