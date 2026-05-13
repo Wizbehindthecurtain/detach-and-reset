@@ -14,6 +14,16 @@
   --font-sans: var(--font-plex);
   --font-mono: var(--font-plex-mono);
   --font-display: var(--font-shoulders);
+
+  /* ── /enterprise — Quiet Luxury tokens (additive, no conflict) ── */
+  --color-paper: #ede6d5;
+  --color-ivory: #f8f3e8;
+  --color-deep-ink: #1a1612;
+  --color-brass: #9c7b3f;
+  --color-muted-warm: #4a4338;
+
+  --font-cormorant: var(--font-cormorant-src);
+  --font-outfit: var(--font-outfit-src);
 }
 
 html {
