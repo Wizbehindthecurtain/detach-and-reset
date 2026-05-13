@@ -7,7 +7,7 @@ import { WhyRoofers } from "@/components/sections/WhyRoofers";
 import { BrandsServiced } from "@/components/sections/BrandsServiced";
 import { RecentJobs } from "@/components/sections/RecentJobs";
 import { FAQ } from "@/components/sections/FAQ";
-import { BookCallForm } from "@/components/sections/BookCallForm";
+import { BookCallSection } from "@/components/sections/BookCallSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { Footer } from "@/components/sections/Footer";
 
@@ -21,7 +21,7 @@ export default function Home() {
       <BrandsServiced />
       <RecentJobs />
       <FAQ />
-      <BookCallForm />
+      <BookCallSection />
       <PartnersSection />
       <Footer />
     </>
