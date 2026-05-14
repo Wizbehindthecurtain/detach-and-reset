@@ -54,10 +54,6 @@ export function EnterpriseHero() {
           {/* Warm cream-tint overlay — harmonizes the saturated photo with the
               paper field. Multiply blend lifts paper tones into shadows. */}
           <div aria-hidden className="absolute inset-0 bg-paper/25 mix-blend-multiply" />
-          {/* Bottom fade — softens the photo's lower edge into the page bg. */}
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-paper" />
-          {/* Faint top vignette — pulls eye toward the center of the frame. */}
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-paper/15 via-transparent to-transparent" />
         </figure>
       </div>
     </section>
