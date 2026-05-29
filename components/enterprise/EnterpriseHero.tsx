@@ -12,7 +12,7 @@ export function EnterpriseHero() {
         {/* ── Brand mark ── */}
         <div className="text-center">
           <p className="font-cormorant text-xl sm:text-2xl text-deep-ink leading-none">
-            <span className="italic font-medium">Detach &amp; Reset</span>
+            <span className="italic font-medium">Removal &amp; Re-Install</span>
             <span className="ml-3 inline-block align-[3px] font-outfit not-italic text-[10px] uppercase tracking-[0.4em] text-brass font-light">
               An operating brief
             </span>
@@ -34,7 +34,7 @@ export function EnterpriseHero() {
 
         {/* ── Lede ── */}
         <p className="mt-10 sm:mt-12 mx-auto max-w-2xl font-outfit text-center text-base sm:text-lg lg:text-xl text-muted-warm leading-[1.7] font-light tracking-[0.005em]">
-          A single operating partnership for solar detach &amp; reset across every portfolio company —{" "}
+          A single operating partnership for solar removal &amp; re-install across every portfolio company —{" "}
           <span className="text-deep-ink">Florida and 14 other states</span>, manufacturer-aligned, fully insured.
         </p>
 

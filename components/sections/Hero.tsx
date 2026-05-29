@@ -1,6 +1,6 @@
 // Hero — industrial-editorial. Asymmetric 12-col grid on lg+, single-column on mobile.
 // Drafting-table grain + faint blueprint grid in the background, mono spec eyebrow,
-// massive Big Shoulders display H1 with the brand verb ("DETACH & RESET") punched
+// massive Big Shoulders display H1 with the brand verb ("REMOVAL & RE-INSTALL") punched
 // in safety-orange. Right side is an "asset bay" placeholder for the Raymond_DNR
 // jobsite photo — bracketed corners, hatched fill, alphanumeric slot code — so the
 // gap reads as intentionally reserved, not forgotten. Below the fold of the hero:
@@ -45,7 +45,7 @@ export function Hero() {
 
             <h1 className="reveal reveal-3 font-display font-black uppercase text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-[9rem] leading-[0.82] tracking-tight">
               <span className="block">Florida&apos;s solar</span>
-              <span className="block text-safety">detach &amp; reset</span>
+              <span className="block text-safety">removal &amp; re-install</span>
               <span className="block">crew for roofers.</span>
             </h1>
 

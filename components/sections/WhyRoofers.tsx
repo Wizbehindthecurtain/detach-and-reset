@@ -64,7 +64,7 @@ const ADVANTAGES: ReadonlyArray<Advantage> = [
     tag: "Schedule",
     Icon: CalendarCheck,
     title: "Fast turnaround",
-    body: "Detach scheduled to your roof start, not ours.",
+    body: "Removal scheduled to your roof start, not ours.",
   },
 ];
 

@@ -47,7 +47,7 @@ export function BookCallSection() {
           <div className="px-5 sm:px-8 lg:px-10 py-8 sm:py-10">
             <iframe
               src={SCHEDULE_URL}
-              title="Book a call with Detach and Reset"
+              title="Book a call with Removal and Re-Install"
               loading="lazy"
               className="block w-full h-[720px] sm:h-[680px] lg:h-[660px] border-0 bg-white"
             />

@@ -28,7 +28,7 @@ export const env = {
   get QUOTE_FROM_EMAIL() {
     return read(
       "QUOTE_FROM_EMAIL",
-      "portfolio-review@detachandreset.com",
+      "portfolio-review@removalandreinstall.energy",
     );
   },
 };

@@ -1,4 +1,4 @@
-// 4i Energy mark + "DETACH AND RESET" wordmark. Wordmark uses the display
+// 4i Energy mark + "REMOVAL AND RE-INSTALL" wordmark. Wordmark uses the display
 // face (Big Shoulders) for an industrial-signage feel. Variant picks SVG +
 // wordmark color: `light` for navy bg, `dark` for bone bg.
 
@@ -31,7 +31,7 @@ export function Logo({ variant = "light", className }: LogoProps) {
           wordmarkColor,
         )}
       >
-        DETACH AND RESET
+        REMOVAL AND RE-INSTALL
       </span>
     </div>
   );

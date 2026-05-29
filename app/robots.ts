@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://detachandreset.com/sitemap.xml",
-    host: "https://detachandreset.com",
+    sitemap: "https://removalandreinstall.energy/sitemap.xml",
+    host: "https://removalandreinstall.energy",
   };
 }

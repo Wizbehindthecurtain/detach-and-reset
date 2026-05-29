@@ -25,7 +25,7 @@ const STEPS: ReadonlyArray<Step> = [
     numeral: "iii.",
     headline: "Scheduling SLA",
     description:
-      "Detach scheduled to your roof start, not ours. Three- to seven-business-day window depending on roofing schedule; rush jobs are a phone call.",
+      "Removal scheduled to your roof start, not ours. Three- to seven-business-day window depending on roofing schedule; rush jobs are a phone call.",
   },
 ];
 

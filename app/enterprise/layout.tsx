@@ -15,13 +15,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: { absolute: "Detach and Reset — An operating brief for PE-backed roofing platforms" },
+  title: { absolute: "Removal and Re-Install — An operating brief for PE-backed roofing platforms" },
   description:
-    "Infrastructure-grade execution for solar detach & reset at portfolio scale. Florida and 14 other states. Manufacturer-aligned. Fully insured.",
+    "Infrastructure-grade execution for solar removal & re-install at portfolio scale. Florida and 14 other states. Manufacturer-aligned. Fully insured.",
   openGraph: {
-    title: "Detach and Reset — An operating brief",
+    title: "Removal and Re-Install — An operating brief",
     description:
-      "Solar detach & reset, baked into the operating playbook of PE-backed roofing platforms.",
+      "Solar removal & re-install, baked into the operating playbook of PE-backed roofing platforms.",
   },
 };
 

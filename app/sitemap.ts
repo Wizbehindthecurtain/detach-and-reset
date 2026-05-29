@@ -8,13 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     {
-      url: "https://detachandreset.com",
+      url: "https://removalandreinstall.energy",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 1.0,
     },
     {
-      url: "https://detachandreset.com/enterprise",
+      url: "https://removalandreinstall.energy/enterprise",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,

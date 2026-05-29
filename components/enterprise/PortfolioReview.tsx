@@ -109,7 +109,7 @@ export function PortfolioReview() {
             Thirty minutes <em className="italic font-normal text-brass">across your portfolio.</em>
           </h2>
           <p className="mt-8 mx-auto max-w-2xl font-outfit font-light text-base sm:text-lg text-muted-warm leading-[1.7]">
-            A short note about your portfolio scope, and TJ Nardini will walk you through where solar detach &amp; reset fits across your platform.
+            A short note about your portfolio scope, and TJ Nardini will walk you through where solar removal &amp; re-install fits across your platform.
           </p>
         </div>
 

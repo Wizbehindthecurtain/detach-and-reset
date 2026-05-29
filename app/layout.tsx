@@ -24,23 +24,23 @@ const shoulders = Big_Shoulders({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://detachandreset.com";
+const SITE_URL = "https://removalandreinstall.energy";
 const TAGLINE =
-  "Florida's solar partner for roofing contractors. We detach, store, and reset the panels — you handle the roof.";
+  "Florida's solar partner for roofing contractors. We remove, store, and reinstall the panels — you handle the roof.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Detach and Reset",
-    template: "%s · Detach and Reset",
+    default: "Removal and Re-Install",
+    template: "%s · Removal and Re-Install",
   },
   description: TAGLINE,
-  applicationName: "Detach and Reset",
+  applicationName: "Removal and Re-Install",
   authors: [{ name: "4i Energy Partners", url: "https://4i.energy" }],
   creator: "4i Energy Partners",
-  publisher: "Detach and Reset",
+  publisher: "Removal and Re-Install",
   keywords: [
-    "solar detach and reset Florida",
+    "solar removal and re-install Florida",
     "solar remove and reinstall Florida",
     "solar R&R roofing subcontractor",
     "reroof with solar Florida",
@@ -59,14 +59,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "Detach and Reset",
-    title: "Detach and Reset — Florida's solar detach & reset crew for roofers.",
+    siteName: "Removal and Re-Install",
+    title: "Removal and Re-Install — Florida's solar removal & re-install crew for roofers.",
     description: TAGLINE,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Detach and Reset — Florida's solar detach & reset crew for roofers.",
+    title: "Removal and Re-Install — Florida's solar removal & re-install crew for roofers.",
     description: TAGLINE,
   },
   robots: {

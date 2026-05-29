@@ -9,7 +9,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Detach and Reset — An operating brief for PE-backed roofing platforms";
+  "Removal and Re-Install — An operating brief for PE-backed roofing platforms";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -162,7 +162,7 @@ export default async function Image() {
             margin: "36px auto 0",
           }}
         >
-          A single operating partnership for solar detach &amp; reset across every portfolio company — Florida and 14 other states, manufacturer-aligned, fully insured.
+          A single operating partnership for solar removal &amp; re-install across every portfolio company — Florida and 14 other states, manufacturer-aligned, fully insured.
         </div>
 
         {/* Spacer to bottom */}
@@ -195,7 +195,7 @@ export default async function Image() {
               color: COLORS.ink,
             }}
           >
-            Detach &amp; Reset
+            Removal &amp; Re-Install
           </div>
           <div
             style={{

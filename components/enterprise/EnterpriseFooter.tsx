@@ -12,7 +12,7 @@ export function EnterpriseFooter() {
     <footer className="bg-ivory border-t-[0.5px] border-brass/30">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20 text-center">
         <p className="font-cormorant italic text-xl sm:text-2xl text-deep-ink font-medium leading-none">
-          Detach &amp; Reset
+          Removal &amp; Re-Install
         </p>
         <p className="mt-2 font-outfit text-[9px] uppercase tracking-[0.4em] text-brass font-light">
           An operating brief for PE-backed roofing platforms
@@ -36,7 +36,7 @@ export function EnterpriseFooter() {
         </p>
 
         <p className="mt-8 font-outfit text-[10px] uppercase tracking-[0.4em] text-muted-warm/70 font-light">
-          © {year} Detach and Reset
+          © {year} Removal and Re-Install
         </p>
       </div>
     </footer>

@@ -35,7 +35,7 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <Logo variant="light" />
             <p className="text-sm sm:text-base text-bone/70 leading-relaxed max-w-xs">
-              Florida&apos;s solar detach &amp; reset crew for roofers.
+              Florida&apos;s solar removal &amp; re-install crew for roofers.
             </p>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/40 mt-1">
               A 4i Energy Partners company
@@ -145,7 +145,7 @@ export function Footer() {
 
         {/* Bottom strip */}
         <div className="mt-14 sm:mt-20 pt-6 border-t border-bone/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-bone/40">
-          <span>© {year} Detach and Reset · All rights reserved</span>
+          <span>© {year} Removal and Re-Install · All rights reserved</span>
           <span>FL · EC13013240 · 4i Energy Partners</span>
         </div>
       </div>

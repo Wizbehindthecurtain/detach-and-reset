@@ -10,12 +10,12 @@
 //   - Custom fonts require fetching a .ttf and passing as ArrayBuffer in the
 //     `fonts` option. We're using system-ui here for v1 to keep the
 //     generator zero-dependency; the brand recognition lands via color +
-//     composition + the "DETACH & RESET" safety-orange punch.
+//     composition + the "REMOVAL & RE-INSTALL" safety-orange punch.
 
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Detach and Reset — Florida's solar detach & reset crew for roofers.";
+  "Removal and Re-Install — Florida's solar removal & re-install crew for roofers.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default async function Image() {
         {/* Push the H1 down */}
         <div style={{ flex: 1, display: "flex" }} />
 
-        {/* H1 — three lines, "DETACH & RESET" punched in orange */}
+        {/* H1 — three lines, "REMOVAL & RE-INSTALL" punched in orange */}
         <div
           style={{
             display: "flex",
@@ -83,7 +83,7 @@ export default async function Image() {
         >
           <div style={{ display: "flex" }}>Florida&apos;s solar</div>
           <div style={{ display: "flex", color: "#FF6A13" }}>
-            detach &amp; reset
+            removal &amp; re-install
           </div>
           <div style={{ display: "flex" }}>crew for roofers.</div>
         </div>
@@ -102,7 +102,7 @@ export default async function Image() {
             fontWeight: 600,
           }}
         >
-          <span style={{ display: "flex" }}>Detach and Reset</span>
+          <span style={{ display: "flex" }}>Removal and Re-Install</span>
           <span style={{ display: "flex" }}>FL · EC13013240 · Insured</span>
         </div>
       </div>
