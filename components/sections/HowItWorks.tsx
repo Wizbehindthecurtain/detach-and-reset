@@ -30,11 +30,11 @@ const STEPS: ReadonlyArray<Step> = [
   {
     number: "02",
     Icon: Wrench,
-    title: "We detach and store the system.",
-    body: "Our crew pulls panels, micros, racking. Stored indoors. Roof is clear when you start.",
+    title: "We remove and secure the system.",
+    body: "Our crew pulls panels, micros, racking. Secured on-site outdoors. Roof is clear when you start.",
     specs: [
       { label: "Scope", value: "Panels · micros · racking" },
-      { label: "Storage", value: "Indoor" },
+      { label: "Storage", value: "On-site · secured" },
       { label: "Deck", value: "Clear for your crew" },
     ],
   },
