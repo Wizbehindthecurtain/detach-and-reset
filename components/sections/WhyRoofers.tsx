@@ -12,7 +12,6 @@ import {
   Map,
   ShieldCheck,
   Stamp,
-  Zap,
 } from "lucide-react";
 import { CornerBrackets } from "@/components/shared/CornerBrackets";
 
@@ -66,13 +65,6 @@ const ADVANTAGES: ReadonlyArray<Advantage> = [
     Icon: CalendarCheck,
     title: "Fast turnaround",
     body: "Removal scheduled to your roof start, not ours.",
-  },
-  {
-    code: "07",
-    tag: "Rush",
-    Icon: Zap,
-    title: "Rush jobs taken",
-    body: "Emergency reroof on short notice? Call us. Rush pulls scheduled within 24 hours.",
   },
 ];
 
