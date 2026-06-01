@@ -1,5 +1,6 @@
 // Composes page sections in order. Sections fill in across Slices 1-8.
 
+import Script from "next/script";
 import { Header } from "@/components/shared/Header";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -14,6 +15,13 @@ import { Footer } from "@/components/sections/Footer";
 export default function Home() {
   return (
     <>
+      <Script
+        id="vtag-ai-js"
+        src="https://r2.leadsy.ai/tag.js"
+        data-pid="1kJvlZRdMNmX8AYds"
+        data-version="062024"
+        strategy="afterInteractive"
+      />
       <Header />
       <Hero />
       <HowItWorks />
