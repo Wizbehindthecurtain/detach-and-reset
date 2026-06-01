@@ -17,7 +17,15 @@ export function Header() {
 
       <div className="mx-auto max-w-7xl h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
         <Logo variant="light" />
-        <PhoneLink variant="header" />
+        <div className="flex items-center gap-3">
+          <PhoneLink variant="header" />
+          <a
+            href="#book"
+            className="hidden sm:inline-flex items-center h-9 px-5 bg-safety hover:bg-safety-hot text-navy-deep font-display font-bold tracking-[0.18em] uppercase text-sm transition-colors"
+          >
+            Book a Call
+          </a>
+        </div>
       </div>
     </header>
   );
